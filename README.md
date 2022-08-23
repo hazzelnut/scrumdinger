@@ -20,9 +20,7 @@ Also learned about `@Binding` and `@State`. SwiftUI's way of managing state info
 
 Here's what all of it looks like so far:
 
-
-https://user-images.githubusercontent.com/6500879/186220118-d890c17b-d781-4f55-8b29-6d4f64795f68.mov
-
+https://user-images.githubusercontent.com/6500879/186221236-c533f008-4e75-45c8-9215-817d7b6f118c.mov
 
 
 ***Fast forward by about a week ⏱***
