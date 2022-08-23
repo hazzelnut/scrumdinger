@@ -12,6 +12,49 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ### August 23, 2022
 
+Wired up the app using `@Binding` and `@State` in order to pass data between views. Now the 'Edit' functionality works! 
+
+Updating existing data is done by passing [*projectedValue*](https://developer.apple.com/documentation/swiftui/binding/projectedvalue) down the chain of views using the `${name_of_value}` syntax.
+
+Defining `@State` in a struct creates a source of truth for a value type. To make modifications to that state value, we pass the value using the *`projectedValue`* syntax (ex. `${name_of_value}`) also known as 'passing a binding'. Depending on where that value is passed, a binding lets us share write access to that `@State` value in other views. And, we can use `@Binding` in a struct to declare a value with write access to a `@State` value in some other view.
+
+For example, we have the parent view `DetailView.swift`:
+```swift
+import SwiftUI
+
+struct DetailView: View {
+  @State private var data = DailyScrum.Data()
+  ...
+  List {
+    ...
+  }
+  .sheet(...) // The 'Edit' modal
+  NavigationView {
+    DetailEditView(data: $data) // pass the projectedValue
+  }
+}
+```
+And in the child view `DetailEditView.swift`:
+```swift
+import SwiftUI
+
+struct DetailEditView: View {
+    @Binding var data: DailyScrum.Data // Reference to a state value in some other view that we have write access to
+    ...
+    Section(...) {
+        ForEach(data.attendees) { attendee in
+            Text(attendee.name)
+        }
+        .onDelete { indices in
+            data.attendees.remove(atOffsets: indices)
+        } // We modify the state value
+    }
+}
+```
+
+And this is what we have 🎉:
+
+
 ### August 22, 2022
 
 Got `NavigationalViews` working. Now, a user can navigate to multiple views. In addition, we can also open up a 'modal' or a `.sheet` as it is called. In the app, that happens when we press on the 'Edit' button.
