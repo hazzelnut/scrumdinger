@@ -23,7 +23,7 @@ For example, we have the parent view `DetailView.swift`:
 import SwiftUI
 
 struct DetailView: View {
-  @State private var data = DailyScrum.Data()
+  @State private var data = DailyScrum.Data() // Define source of truth
   ...
   List {
     ...
@@ -39,7 +39,7 @@ And in the child view `DetailEditView.swift`:
 import SwiftUI
 
 struct DetailEditView: View {
-    @Binding var data: DailyScrum.Data // Reference to a state value in some other view that we have write access to
+    @Binding var data: DailyScrum.Data // Reference to the 'data' @State value in DetailView
     ...
     Section(...) {
         ForEach(data.attendees) { attendee in
