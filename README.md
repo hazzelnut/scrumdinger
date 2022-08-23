@@ -10,7 +10,7 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ## Progress
 
-### August 23, 2022
+### August 23, 2022 - Passing Data with Bindings
 
 Wired up the app using `@Binding` and `@State` in order to pass data between views. Now the 'Edit' functionality works! 
 
@@ -55,7 +55,7 @@ struct DetailEditView: View {
 And this is what we have 🎉:
 
 
-### August 22, 2022
+### August 22, 2022 - Navigating Between Views
 
 Got `NavigationalViews` working. Now, a user can navigate to multiple views. In addition, we can also open up a 'modal' or a `.sheet` as it is called. In the app, that happens when we press on the 'Edit' button.
 
@@ -68,7 +68,7 @@ https://user-images.githubusercontent.com/6500879/186221236-c533f008-4e75-45c8-9
 
 ***Fast forward by about a week ⏱***
 
-### August 16, 2022
+### August 16, 2022 - Stacks and Views
 
 Just started out following the tutorial. So far, I'm learning about stacks and views. Quite basic, and not super interesting.
 
