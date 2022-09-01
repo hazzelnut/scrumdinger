@@ -120,6 +120,10 @@ struct DetailEditView: View {
 And this is what we have 🎉:
 
 
+https://user-images.githubusercontent.com/6500879/186251652-c213eeed-3687-40ab-af75-b73b8586ac08.mov
+
+
+
 ### August 22, 2022 - Navigating Between Views
 
 Got `NavigationalViews` working. Now, a user can navigate to multiple views. In addition, we can also open up a 'modal' or a `.sheet` as it is called. In the app, that happens when we press on the 'Edit' button.
