@@ -10,7 +10,7 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ## Progress
 
-### September 1, 2022 - Updating App Data & Managing State and 
+### September 1, 2022 - Updating App Data & Managing State and Life cycle Events
 
 Two new features!
 - Create a new scrum meeting
@@ -39,10 +39,21 @@ NavigationView {
 ```
 Which makes this appear:
 
+<img width="459" alt="Screen Shot 2022-09-01 at 7 38 05 PM" src="https://user-images.githubusercontent.com/6500879/188024534-aa5bc108-01f9-43fc-b1e7-c717f94ca8aa.png">
+
 
 In any case, here's feature #1 with adding a new scrum meeting:
 
+
+https://user-images.githubusercontent.com/6500879/188024552-51bf00d1-2626-4ce8-a920-0632077a9a34.mov
+
+
+
 And feature #2 with keeping track of the history of scrum meetings after one has ended:
+
+
+
+https://user-images.githubusercontent.com/6500879/188024560-b24f890f-d195-4666-aa18-6158eda4818a.mov
 
 
 
