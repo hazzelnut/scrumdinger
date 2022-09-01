@@ -10,6 +10,71 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ## Progress
 
+### September 1, 2022 - Updating App Data & Managing State and 
+
+Two new features!
+- Create a new scrum meeting
+- Keep a history of scrum meetings already held
+
+In terms of new code, it is relatively small. Here, I'm still using using `@Binding` and `@State` to pass data between views.
+
+I personally find it very cool with how simple it is to create a toolbar. Perhaps it is standarized across all UI/UX views on iOS. Basically, we have this:
+
+```swift
+NavigationView {
+  DetailEditView(data: $newScrumData)
+    .toolbar {
+        ToolbarItem(placement: .cancellationAction) {
+            Button("Dismiss") {
+                isPresentingNewScrumView = false
+            }
+        }
+        ToolbarItem(placement: .confirmationAction) {
+            Button("Add") {
+                isPresentingNewScrumView = false
+            }
+        }
+    }
+}
+```
+Which makes this appear:
+
+
+In any case, here's feature #1 with adding a new scrum meeting:
+
+And feature #2 with keeping track of the history of scrum meetings after one has ended:
+
+
+
+### August 24, 2022 - Adding Events and Observable Class
+
+Turns out, there are different ways to define a source of truth (for holding data) in our app. There are value types, like `struct` and `enum` and references types, like `class`. 
+
+In addition, there are ways for an app's view to respond to event changes. In SwiftUI, these event changes are described as Life Cycle Events. For example, you can use `.onAppear` or `.onDisappear` modifiers to trigger events.
+
+```swift
+struct MeetingView: View {
+  var body: some View {
+    ZStack {
+      ...
+    }
+    .onAppear {
+      ... // pass a closure here
+      // ex. scrumTimer.startScrum()
+    }
+    .onDisappear {
+      ... // pass a closure here
+      // ex. scrumTimer.stopScrum()
+    }
+  }
+}
+```
+
+I also learned to extract sections of a view into their own, smaller views. In other words, modularizing our views to be more re-usable.
+
+And, I finally added sound! Whenever a scrum ends, it'll play a tune. Sound files are added under the `/Resources` folder.
+
+
 ### August 23, 2022 - Passing Data with Bindings
 
 Wired up the app using `@Binding` and `@State` in order to pass data between views. Now the 'Edit' functionality works! 
