@@ -9,6 +9,22 @@ And, see what the development experience is like with SwiftUI.
 So far, I quite like it. It reminds me a lot of web development in how it structures the UI layout.
 
 ## Progress
+### September 6, 2022 - Persisting Data
+
+How do we store the user's data such that when they leave and re-open the app, all their information is up-to-date from their last change?
+
+In my limited app dev experience, I feel like there are multiple ways to do it. I think it is possible to send the data across an API to store it in a DB. And later retrieve the data using an API when the app loads.
+
+In this tutorial, I'm storing the data locally on the device. I started by creating a data store, in the form of a new class using the `@ObservableObject` protocol that includes a `load` and `save` method. We save the data to the phone's local and JSON encode the `ScrumStore` data model. All data is stored under the `/Documents` folder. We later decode the JSON data when the user re-opens the app.
+
+The part that's confusing to me, and might require more exploration on my part, is how to use `DispatchQueue` for running background tasks. Without going into too much detail, we're basically running tasks in the background, by using dispatch queues, to save and load user data.
+
+I also learned to use the `@Environment` property to grab the user's state. By using the `scenePhase` environment value, we can detect the current operational state of the app. This allows me to save user data when they are in an `inactive` state.
+
+All this work means we can save and load data when the user quits the app, or when they are in `inactive` state. So when they re-open the app, all the information will be the same as when they left.
+
+Here's what we have:
+
 
 ### September 1, 2022 - Updating App Data & Managing State and Life cycle Events
 
