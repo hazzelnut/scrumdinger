@@ -9,6 +9,72 @@ And, see what the development experience is like with SwiftUI.
 So far, I quite like it. It reminds me a lot of web development in how it structures the UI layout.
 
 ## Progress
+
+### September 9, 2022 - Making things asynchronous
+
+With Swift 5.5, concurrency is introduced and we can now use `async/await` in our code.
+In this part of the tutorial, we rewrite how we save and load data in our background queues.
+
+This part is still a little confusing to me. I might have to go back and look at how it is done again. But the idea is that we can simplify our code by not having to pass closures.
+
+For example, in the root of my app `ScrumdingerApp.swift`, I'm passing in a closure to `ScrumStore.save()`:
+
+```swift
+var body: some Scene {
+    ...
+    NavigationView {
+      ScrumsView(scrums: $store.scrums) {
+        ScrumStore.save(scrums: store.scrums) { result in
+          if case .failure(let error) = result {
+              fatalError(error.localizedDescription)
+          }
+        }
+      }
+    }
+}
+```
+
+By making the implementation of `ScrumStore.save()` async, we can simplify it to:
+
+```swift
+var body: some Scene {
+    ...
+    NavigationView {
+      ScrumsView(scrums: $store.scrums) {
+        Task {
+          do {
+            try await ScrumStore.save(scrums: store.scrums)
+          } catch {
+            fatalError("Error saving scrums.")
+          }
+        } 
+      }
+    }
+}
+
+```
+
+Using `Task` allows us to run asynchronous code, and so does the `.task()` modifier:
+
+```swift
+var body: some Scene {
+    ...
+    NavigationView {
+      ... 
+    }
+    .task {
+      do {
+        store.scrums = try await ScrumStore.load()
+      } catch {
+        fatalError("Error loading scrums.")
+      }
+    }
+}
+```
+
+All in all, the implementation behind making `ScrumStore.load()` and `ScrumStore.save()` use the new `async/await` syntax allows us to simplify the structure of the code when they're called.
+
+
 ### September 6, 2022 - Persisting Data
 
 How do we store the user's data such that when they leave and re-open the app, all their information is up-to-date from their last change?
