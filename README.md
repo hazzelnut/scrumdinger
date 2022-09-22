@@ -10,6 +10,21 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ## Progress
 
+### September 21, 2022 - Error handling
+
+Errors. Sometimes they are helpful, sometimes they are not. In this section of the tutorial, I'm building an error modal (aka `.sheet`) that will pop up when an error occurs. I created a new model and a new view. That is pretty much it. Oh, I guess one cool thing is with the `.sheet` modifier, we can pass a callback when it is dismissed. Here's what it looks like:
+
+```swift
+NavigationView {
+  ...
+}
+.sheet(item: $errorWrapper, onDismiss: {
+  ... // Insert call back here
+}) { 
+  ... // Insert view here
+}
+```
+
 ### September 9, 2022 - Making things asynchronous
 
 With Swift 5.5, concurrency is introduced and we can now use `async/await` in our code.

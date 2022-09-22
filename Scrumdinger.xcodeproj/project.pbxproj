@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410A345F28DBB3F00030B7DC /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A345E28DBB3F00030B7DC /* ErrorWrapper.swift */; };
+		410A346128DBB4800030B7DC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A346028DBB4800030B7DC /* ErrorView.swift */; };
 		412B3B7928B3F4F700D6CFC7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B3B7828B3F4F700D6CFC7 /* DetailView.swift */; };
 		412B3B7B28B412C900D6CFC7 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B3B7A28B412C900D6CFC7 /* DetailEditView.swift */; };
 		412B3B7D28B5333100D6CFC7 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B3B7C28B5333000D6CFC7 /* ThemeView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410A345E28DBB3F00030B7DC /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		410A346028DBB4800030B7DC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		412B3B7828B3F4F700D6CFC7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		412B3B7A28B412C900D6CFC7 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		412B3B7C28B5333000D6CFC7 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				41ADE1EA28AD695200F2B646 /* Models */,
 				416E7AC628AC62BE009C4CA1 /* ScrumdingerApp.swift */,
 				41ADE1EF28AD6DD600F2B646 /* CardView.swift */,
+				410A346028DBB4800030B7DC /* ErrorView.swift */,
 				41ADE1F128AD703500F2B646 /* TrailingIconLabelStyle.swift */,
 				412B3B7A28B412C900D6CFC7 /* DetailEditView.swift */,
 				41ADE1F528ADDCDD00F2B646 /* ScrumsView.swift */,
@@ -124,6 +129,7 @@
 		41ADE1EA28AD695200F2B646 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				410A345E28DBB3F00030B7DC /* ErrorWrapper.swift */,
 				41ADE1EB28AD696C00F2B646 /* Theme.swift */,
 				412B3B8A28B6B21700D6CFC7 /* AVPlayer+Ding.swift */,
 				41ADE1ED28AD6C9200F2B646 /* DailyScrum.swift */,
@@ -215,10 +221,12 @@
 				412B3B7928B3F4F700D6CFC7 /* DetailView.swift in Sources */,
 				412B3B8128B68FC500D6CFC7 /* MeetingHeaderView.swift in Sources */,
 				412B3B7B28B412C900D6CFC7 /* DetailEditView.swift in Sources */,
+				410A345F28DBB3F00030B7DC /* ErrorWrapper.swift in Sources */,
 				41ADE1F228AD703500F2B646 /* TrailingIconLabelStyle.swift in Sources */,
 				41ADE1EC28AD696C00F2B646 /* Theme.swift in Sources */,
 				41ADE1F628ADDCDD00F2B646 /* ScrumsView.swift in Sources */,
 				416E7AC928AC62BE009C4CA1 /* MeetingView.swift in Sources */,
+				410A346128DBB4800030B7DC /* ErrorView.swift in Sources */,
 				416E7AC728AC62BE009C4CA1 /* ScrumdingerApp.swift in Sources */,
 				412B3B7D28B5333100D6CFC7 /* ThemeView.swift in Sources */,
 				41ADE1F028AD6DD600F2B646 /* CardView.swift in Sources */,
