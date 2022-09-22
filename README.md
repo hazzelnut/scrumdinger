@@ -25,6 +25,22 @@ NavigationView {
 }
 ```
 
+And here's what happens when I trigger an error. I do this by modifing the app's sandboxed data.
+```bash
+$ xcrun simctl get_app_container booted com.example.apple-samplecode.Scrumdinger data
+
+> /Users/ericchan/Library/Developer/CoreSimulator/Devices/42AA7CDE-2B67-4A1C-9F4C-7BAA9C572CF7/data/Containers/Data/Application/A5DA6FB0-E395-46ED-9CD5-54E5956C2BDC
+
+## Afterwards, I navigate to "{path}/Documents/scrum.data", and modify the contents of the json file.
+
+```
+:
+
+
+https://user-images.githubusercontent.com/6500879/191641997-e76bbdba-3339-4bd5-a6c5-b2529f077212.mov
+
+
+
 ### September 9, 2022 - Making things asynchronous
 
 With Swift 5.5, concurrency is introduced and we can now use `async/await` in our code.
