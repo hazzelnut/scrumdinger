@@ -28,11 +28,12 @@ The last piece is transcribing the user's audio. Here I'm asking the user to all
 
 The interesting part is I can customize what text I display to the user when I ask them for permission. I do that by navigating to the project's target, and adding an entry to the 'custom iOS Target Properties'.
 
-[insert image]
+<img width="1120" alt="SettingTargetProperties" src="https://user-images.githubusercontent.com/6500879/192376379-b268a75e-ebdc-4dc8-8b6e-2cb13c16d54c.png">
+
 
 Here's what the full interaction looks like:
 
-[insert video]
+https://user-images.githubusercontent.com/6500879/192376315-017418c4-998f-4554-bd90-1968145a93ba.mov
 
 
 ### September 26, 2022 - Drawing the Timer
