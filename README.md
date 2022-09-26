@@ -10,6 +10,31 @@ So far, I quite like it. It reminds me a lot of web development in how it struct
 
 ## Progress
 
+### Going forward to the future...
+
+Now that I'm all finished with the tutorial, I'm happy to say that app development with SwiftUI is fairly painless. There wasn't that many hiccups, and besides the slow build times (I have an older Macbook), I got a working app going at the end!
+
+What's next? If I get to it, I would like to try building an app without a tutorial and deploying it to the App Store. Now that I have some basics down, albeit more practice is needed, I at least have some foundational knowledge of what a simple app structure looks like in SwiftUI.
+
+Now it's time for a break!
+
+### Last day!
+### September 26, 2022 - Transcribing the audio!
+After a bit of travelling and seeing family, it's been hard to sit down and find some focus time to finish the rest of the tutorial. But I've finally did it!
+
+I felt a bit more ambitious today. I wanted to get the last couple parts of the tutorial finished so I can move on! 
+
+The last piece is transcribing the user's audio. Here I'm asking the user to allow Scrumdinger to use 'Speech Recognition' and the 'Microphone' abilities so we can transribe their speech and put it into the history.
+
+The interesting part is I can customize what text I display to the user when I ask them for permission. I do that by navigating to the project's target, and adding an entry to the 'custom iOS Target Properties'.
+
+[insert image]
+
+Here's what the full interaction looks like:
+
+[insert video]
+
+
 ### September 26, 2022 - Drawing the Timer
 
 Here, I'm updating the circular timer view to be animated. Instead of a static circle like it was before. Nothing new, except I'm creating another `View` while implementing the `Shape` protocol to draw the circle.
@@ -19,9 +44,6 @@ Here's what it looks like:
 
 
 https://user-images.githubusercontent.com/6500879/192343899-f6b0ee1d-2a3f-44ed-9288-55cdd3274289.mov
-
-
-
 
 
 ### September 21, 2022 - Error handling
