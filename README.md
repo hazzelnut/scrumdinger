@@ -18,6 +18,12 @@ Here's what it looks like:
 
 
 
+https://user-images.githubusercontent.com/6500879/192343899-f6b0ee1d-2a3f-44ed-9288-55cdd3274289.mov
+
+
+
+
+
 ### September 21, 2022 - Error handling
 
 Errors. Sometimes they are helpful, sometimes they are not. In this section of the tutorial, I'm building an error modal (aka `.sheet`) that will pop up when an error occurs. I created a new model and a new view. That is pretty much it. Oh, I guess one cool thing is with the `.sheet` modifier, we can pass a callback when it is dismissed. Here's what it looks like:
